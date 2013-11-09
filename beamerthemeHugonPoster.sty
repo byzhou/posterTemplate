@@ -6,6 +6,13 @@
 \mode<presentation>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Justin Additions
+
+\RequirePackage{expl3}
+\let\@email\@empty
+\def\email#1{\gdef\@email{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setbeamercolor{headline}{fg=tabutter,bg=ta3aluminium}
 \setbeamercolor{footline}{fg=tabutter, bg=ta3gray}
@@ -64,26 +71,23 @@
       \end{column}
       \begin{column}{.24\paperwidth}
         \vskip5ex
-          \includegraphics[width=.08\paperwidth]{~/Pictures/officialImages/DOE_Seal}
-          \includegraphics[width=.08\paperwidth]{~/Pictures/officialImages/NSF}
-          %\includegraphics[width=.08\paperwidth]{~/Pictures/officialImages/CMS-BW-Label}
-          \includegraphics[width=.08\paperwidth]{~/Pictures/officialImages/CMS-Color-Label}
+          \includegraphics[width=.08\paperwidth]{logos/DOE_Seal}
+          \includegraphics[width=.08\paperwidth]{logos/NSF}
+          \includegraphics[width=.08\paperwidth]{logos/CMS-Color-Label}
         \vskip2ex
       \end{column}
       %\begin{column}{.6\paperwidth}
       \begin{column}{.45\paperwidth}
         \vskip4ex
         \raggedleft
-        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
-        \usebeamercolor{author in headline}{\color{fg}\textbf{\Large{\insertauthor}}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge\inserttitle}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\textbf{\Large\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}{\large\insertinstitute}\\[1ex]}     
       \end{column}
       \begin{column}{.3\paperwidth}
         \vskip9ex
         \begin{center}
-          %\includegraphics[width=.95\linewidth]{figures/deselaers/logos/rwthaachenuniversity-yelloworange}
-          %\includegraphics[width=.95\linewidth]{~/Pictures/officialImages/UF_Signature}
-          \includegraphics[width=.28\paperwidth]{~/Pictures/officialImages/UF_Signature}
+          \includegraphics[width=.28\paperwidth]{logos/UF_Signature}
         \end{center}
         \vskip2ex
       \end{column}
@@ -123,7 +127,7 @@
   \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
     %\texttt{http://www-i6.informatik.rwth-aachen.de}
     \hfill
-    \texttt{emailhardcoded@domain.com}
+    \texttt{\@email{}}
     \vskip1ex
   \end{beamercolorbox}
   \vskip0pt%
