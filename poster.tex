@@ -1,28 +1,10 @@
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
-\usepackage{grffile}
 \mode<presentation>{\usetheme{HugonPoster}}
-\usepackage[english]{babel}
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath,amsthm, amssymb, latexsym}
-%\usepackage{times}\usefonttheme{professionalfonts}  % obsolete
-%\usefonttheme[onlymath]{serif}
-%\boldmath
+
 \usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
-% change list indention level
-% \setdefaultleftmargin{3em}{}{}{}{}{}
-
-\newcommand{\jra}{\ $\rightarrow$ \ }
-
-%\usepackage{snapshot} % will write a .dep file with all dependencies, allows for easy bundling
-
-\usepackage{array,booktabs,tabularx}
-\newcolumntype{Z}{>{\centering\arraybackslash}X} % centered tabularx columns
-\newcommand{\pphantom}{\textcolor{ta3aluminium}} % phantom introduces a vertical space in p formatted table columns??!!
-
 \listfiles
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\graphicspath{{figures/}}
  
 \title{Title}
 \author{My Name}
@@ -31,8 +13,9 @@
 \email{email@somedomain.com}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Must manually figure out what the column height should be.  105cm works well for A0
 \newlength{\columnheight}
-\setlength{\columnheight}{105cm}
+\setlength{\columnheight}{105cm} % for A0
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -225,10 +208,3 @@
   \tiny\hfill{Created with \LaTeX \texttt{beamerposter}  \url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php} \hskip1em}
 \end{frame}
 \end{document}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-PDF-mode: t
-%%% End:
