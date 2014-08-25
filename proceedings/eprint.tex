@@ -45,7 +45,7 @@
 
 % include packages you will need
 \usepackage{color}
-\usepackage{microtype}
+%\usepackage{microtype}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % basic data for the eprint:
@@ -118,61 +118,176 @@ June 2-7, 2014
 
 \section{Introduction}
 
-HERE IS YOUR INTRODUCTION, REPLACE THE TEXT
+The recent discovery of a particle with properties consistent with a 
+standard model (SM) Higgs boson~\cite{Aad:2012tfa,Chatrchyan:2012ufa,Chatrchyan:2013lba} 
+has provided new insight into the nature of the SM and possible new physics extensions.
+More may be learned by further study of the production and decay modes of
+the new particle, especially highly suppressed ones.  The SM Higgs boson decay
+to a pair of opposite sign muons is a perfect candidate, due to the small
+SM branching ratio ($2.2\times10^{-4}$~\cite{Denner:2011mq}), combined
+with the clean final state.  
 
-The program will be devoted to a review of the latest experimental and theoretical results on hadron collider physics and a discussion on the outlook for the coming years. The conference intends to provide a lively discussion between experimenters and theorists on topics such as the Standard Model Physics and Beyond, the Higgs Boson, Supersymmetry and Heavy Ion Physics and planning for the high luminosity upgrades.
+This paper reports a search for a SM-like Higgs boson in the \mm{} decay channel 
+with the CMS experiment at the CERN LHC~\cite{CMS:2013aga}.  
+Data samples are analyzed corresponding to integrated luminosities of 
+$5.0\pm0.1$\,fb$^{-1}$ at a center-of-mass energy ($\sqrt{s}$) of
+7\,TeV and $19.7\pm0.5$\,fb$^{-1}$ at 8\,TeV.
+The Higgs boson signal is sought as a narrow signal peak in the 
+dimuon invariant mass (\Mmumu{}) spectrum, over a smoothly falling
+background dominated by the Drell--Yan and $t\bar{t}$ production processes.  
+An extensive event categorization is used to increase search sensitivity.  
+The signal acceptance times efficiency is estimated using a Monte-Carlo
+simulation which has been extensively validated using data.
+The rates of signal and background production are estimated by fitting 
+parameterized shapes to the \Mmumu{} spectra in each category.
 
-\section{Observations}
+\section{Search Methodology}
 
-REPLACE THE TEXT, FIGURE and TABLE.
+Events are collected with a trigger that requires at least one
+isolated muon candidate with transverse-momentum (\pt) greater than 24\,\GeVc{},
+and $|\eta|<2.1$, where $\eta$ is the pseudorapidity.  In the offline
+data analysis, events are required to contain two opposite-sign
+muon candidates, each with $|\eta|<2.1$.  The muon candidate that passed 
+the trigger selection must have $\pt{}>25$\,\GeVc{}, while the other one must 
+have $\pt>15$\,\GeVc{}. Both muon candidates must also pass isolation and quality 
+criteria.
 
-Observation of the Higgs Boson,  \cite{Aad:2012tfa},\cite{Chatrchyan:2012ufa}. 
+Events passing the above selection are then assigned to categories.  Events
+where the leading jet \pt{} is greater than 50\,\GeVc{}, the sub-leading
+jet \pt{} is greater than 30\,\GeVc{}, and the \ptmiss{} is less than 40\GeVc{} 
+are assigned to the 2-Jet category.  The \ptmiss{} is defined as the transverse
+momentum of the sum of the dimuon and dijet four-vectors.
+All events not assigned to the 2-Jet category are assigned to the 0,1-jet category.
+The 2-Jet category has a high signal-to-background ratio (S/B) due to the 2-Jet
+topology of VBF Higgs boson production, while the 0,1-jet category has a large
+acceptance times efficiency for GF Higgs boson production.
 
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%%   use this format to include an .eps figure into your paper
-%%
+Events in the 2-Jet category are further assigned to subcategories.  The 2-Jet
+VBF Tight subcategory is optimized for VBF production, the 2-Jet GF Tight
+category is optimized for GF production, while the remaining 2-Jet events
+are assigned to the 2-Jet Loose category.  Events in the 0,1-Jet categories
+are assigned to one of 15 categories depending on the dimuon \pt and $|\eta|$
+of the muons.  The dimuon \pt{} helps separate the GF Higgs signal from background,
+while muon $|\eta|$ is related to the \Mmumu{} resolution.  The \Mmumu{}
+mass resolution for different categories varies from 3.8 to 5.9\,\GeVcc{}, 
+in terms of full-width-at-half-maximum.
+
+The rates of signal and background production are then extracted from the 
+\Mmumu{} distribution of the
+events in each category.  A parameterized signal shape made of the sum of
+two Gaussian functions is used to model the shape of the Higgs boson signal, while
+the function,
+\begin{equation}
+f(\Mmumu{}) = \frac{\exp(p_1 \Mmumu{})}{\Mmumu{}-p_2},
+\end{equation}
+is used to model the shape of the background.
+Example fits of the background model to the data are shown in Figure~\ref{fig:mass}.
+
+
 \begin{figure}[htb]
 \centering
-\includegraphics[height=2in]{head_lhcp2014.jpg}
-\caption{ Place the caption here}
-\label{fig:figure1}
+\includegraphics[width=0.39\textwidth]{plotsPublic/mass_AnanlysisA/pdf/CombSplitAll_8TeV_125_Jets01PassPtG10BB.pdf}
+\includegraphics[width=0.39\textwidth]{plotsPublic/mass_AnanlysisA/pdf/CombSplitAll_8TeV_125_Jet2CutsVBFPass.pdf}
+\caption{ The dimuon invariant mass distribution for the 0,1-Jet Tight BB (left) and 2-Jet VBF Tight (right) categories.
+            A fit of the parameterized background model used to estimate the background contribution is shown
+            as a dark blue line, with it's uncertainty expressed as a light blue band.  The expected SM Higgs boson
+            signal magnified by a factor of twenty is shown by the red line, for $\mh{}=125\,\GeVcc{}$.
+            }
+\label{fig:mass}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-See Figure \ref{fig:figure1} and Table \ref{tab:table1}. 
+\section{Results}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%%   use this format to include a LaTeX table  into your paper
-%%
+Results are extracted by simultaneous fits of the parameterized signal and background shapes
+to the \Mmumu{} distributions of all of the categories.  Upper limits
+on the signal rate divided by the SM Higgs boson signal rate ($\sigma/\sigma_\mathrm{SM}$) 
+for a Higgs boson mass between 120 and 150\,\GeVcc{} are shown in Figure~\ref{fig:results} at 
+the 95\% confidence level.  
+For $\mh{}=125\,\GeVcc{}$, an expected (observed) 95\% confidence level upper limit
+on the Higgs boson signal rate is set at 
+$5.1^{+2.3}_{-1.5}\times\mathrm{SM}$ ($7.4\times\mathrm{SM}$).
+For a Higgs boson mass between 120 and 150\,\GeVcc{}, background-only p-values are shown
+in Figure~\ref{fig:results}.  A small excess is observed near $\mh{}=125\GeVcc{}$, with
+a significance of about $1\sigma$.  A larger excess is observed around 148\,\GeVcc{}.
+This excess has a local significance of $2.3\sigma$, which is brought down to a global significance
+of $0.8\sigma$.  Thus, no significant excess is found.
+
+Assuming a SM-like Higgs boson of mass 125.7\,\GeVcc{}~\cite{CMS:yva} decays to \mm{},
+the best fit signal rate is $2.9^{+2.8}_{-2.7}\times\mathrm{SM}$.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.39\textwidth]{plotsPublic/limits_annalysisA/pdf/CombSplitAll_7P8TeV.pdf}
+\includegraphics[width=0.39\textwidth]{plotsPublic/pValues_analysisA/pdf/pValues_Final7P8TeV.pdf}
+\caption{ Upper limits on the signal strength (left) and p-values for the 
+            background-only hypothesis (right) for \mh{} from 120 to 150\,\GeVcc{}.}
+\label{fig:results}
+\end{figure}
+
+\section{Projections to $\mathbf{\sqrt{s}=14}$\,TeV}
+
+This section presents the results of Ref.~\cite{CMS:2013xfa} in relation to
+the projected performance of the CMS \hmm{} search at $\sqrt{s}=14$\,TeV.
+The methodology of the projection is to use the current \hmm{} search
+procedure and simulated data samples without modification, except
+for scaling the signal and background cross-sections from $\sqrt{s}=8$\,TeV
+to 14\,TeV and similarly scaling the luminosity.
+In addition, two systematic uncertainty scenarios are investigated.
+In Scenario~1, all systematic uncertainties are assumed to be the same
+as in the current search, while in Scenario~2, the experimental uncertainties
+are scaled with the luminosity to the $-1/2$-power, while the theoretical
+uncertainties are reduced by 50\%.
+
+The results of the projection are that SM \hmm{} can be excluded with 
+$175\pm^{+150}_{-75}$\,fb$^{-1}$ of integrated luminosity, for $\mh{}=125\,\GeVcc{}$.  
+The two scenarios differ little at this luminosity.  
+Projections for 300 and 3000\,fb$^{-1}$ are shown in Table~\ref{tab:projTab}.  
+The table shows the expected significance of SM \hmm{}, the uncertainty
+on the best fit of the \hmm{} rate, and the uncertainty on the best fit
+of the Higgs boson-muon coupling, when combined with other CMS Higgs measurements.
+
 \begin{table}[t]
 \begin{center}
-\begin{tabular}{l|ccc}  
-Patient &  Initial level($\mu$g/cc) &  w. Magnet &  
-w. Magnet and Sound \\ \hline
- Guglielmo B.  &   0.12     &     0.10      &     0.001  \\
- Ferrando di N. &  0.15     &     0.11      &  $< 0.0005$ \\ \hline
-\end{tabular}
-\caption{ place the caption here }
-\label{tab:table1}
+\caption{Projected \hmm search sensitivity at $\sqrt{s}=14$\,TeV for integrated 
+            luminosities of 300 and 3000\,fb$^{-1}$.  See text for details.}
+\label{tab:projTab}
+  \begin{tabular}{lcc} \hline
+      & 300\,fb$^{-1}$ & 3000\,fb$^{-1}$ \\ \hline
+    Significance  & $2.5\sigma$ & $7.9\sigma$ \\ 
+    Uncertainty on $\sigma/\sigma_{SM}$ Scenario 1  & 42\% & 20\% \\ 
+    Uncertainty on $\sigma/\sigma_{SM}$ Scenario 2  & 40\% & 14\% \\ 
+    Uncertainty on Muon Coupling Scenario 1  & 23\% & 8\% \\ 
+    Uncertainty on Muon Coupling Scenario 2  & 23\% & 7.5\% \\ \hline
+  \end{tabular}
 \end{center}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Interpretations}
+\section{Summary}
 
-The conference banquet will be hosted at the Spirit of New York, dinner while on a three-hour cruise around Manhattan. Enjoy an evening of most entertaining and unique combination of dining, dancing, entertainment and views on New York Harbor. Registered attendees and accompanying guests are invited to attend. 
+A search for a SM-like Higgs boson in the \mm{} decay channel is reported.
+A narrow \hmm{} peak in the \Mmumu{} spectrum is sought over a smoothly
+falling background dominated by Drell--Yan and $t\bar{t}$.  Search
+sensitivity is enhanced with an extensive event categorization.  The
+signal and background rates are extracted by fitting parameterized
+signal and background shapes to the \Mmumu{} spectra in each category.
 
+No significant excess is found, so upper limits are set on the
+rate of \hmm{} production with respect to the SM prediction.
+For $\mh{}=125\,\GeVcc{}$, an expected (observed) 95\% confidence level upper limit
+on the Higgs boson signal rate is set at 
+$5.1^{+2.3}_{-1.5}\times\mathrm{SM}$ ($7.4\times\mathrm{SM}$).
+Assuming a SM-like Higgs boson of mass 125.7\,\GeVcc{}~\cite{CMS:yva} decays to \mm{},
+the best fit signal rate is $2.9^{+2.8}_{-2.7}\times\mathrm{SM}$.
 
-\section{Conclusions}
-
-...... 
+Projections to $\sqrt{s}=14$\,TeV are also reported.  For $\mh{}=125\,\GeVcc{}$,
+SM Higgs boson decays to \mm{} are projected to be excluded with 
+$175\pm^{+150}_{-75}$\,fb$^{-1}$ of integrated luminosity.  The expected significance
+of the SM \hmm{} signal is projected to be 
+$2.5\sigma$ ($7.9\sigma$) for 300 (3000)\,fb$^{-1}$ of integrated luminosity.
 
 %%  if necessary
 \Acknowledgements
-I am grateful to XYZ for fruitful discussions.
+\textcolor{red}{I am grateful to XYZ for fruitful discussions.}
 
 
 \begin{thebibliography}{99}
@@ -182,6 +297,43 @@ I am grateful to XYZ for fruitful discussions.
 %%    see    http://www.slac.stanford.edu/spires/hep/latex.html
 %%  SPIRES will also supply the CITATION line information; please include it.
 %%
+
+\bibitem{Aad:2012tfa} 
+  G.~Aad {\it et al.}  [ATLAS Collaboration],
+  ``Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC,''
+  Phys.\ Lett.\ B {\bf 716}, 1 (2012)
+  [arXiv:1207.7214 [hep-ex]].
+  %%CITATION = ARXIV:1207.7214;%%
+  %3009 citations counted in INSPIRE as of 22 Jul 2014
+  
+%\cite{Chatrchyan:2012ufa}
+\bibitem{Chatrchyan:2012ufa} 
+  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
+  ``Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC,''
+  Phys.\ Lett.\ B {\bf 716}, 30 (2012)
+  [arXiv:1207.7235 [hep-ex]].
+  %%CITATION = ARXIV:1207.7235;%%
+  %2951 citations counted in INSPIRE as of 22 Jul 2014
+
+%\cite{Chatrchyan:2013lba}
+\bibitem{Chatrchyan:2013lba} 
+  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
+  ``Observation of a new boson with mass near 125 GeV in pp collisions at $\sqrt{s}$ = 7 and 8 TeV,''
+  JHEP {\bf 1306}, 081 (2013)
+  [arXiv:1303.4571 [hep-ex]].
+  %%CITATION = ARXIV:1303.4571;%%
+  %188 citations counted in INSPIRE as of 24 Jul 2014
+
+%\cite{Denner:2011mq}
+\bibitem{Denner:2011mq} 
+  %A.~Denner, S.~Heinemeyer, I.~Puljak, D.~Rebuzzi and M.~Spira,
+  A.~Denner {\it et al.},
+  ``Standard Model Higgs-Boson Branching Ratios with Uncertainties,''
+  Eur.\ Phys.\ J.\ C {\bf 71}, 1753 (2011)
+  [arXiv:1107.5909 [hep-ph]].
+  %%CITATION = ARXIV:1107.5909;%%
+  %119 citations counted in INSPIRE as of 24 Aug 2014
+
 
 %\cite{CMS:2013aga}
 \bibitem{CMS:2013aga} 
@@ -208,32 +360,6 @@ in pp collisions at sqrt(s)= 7 and 8 TeV,''
   %%CITATION = ARXIV:1307.7135;%%
   %46 citations counted in INSPIRE as of 24 Jul 2014
 
-\bibitem{Aad:2012tfa} 
-  G.~Aad {\it et al.}  [ATLAS Collaboration],
-  ``Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC,''
-  Phys.\ Lett.\ B {\bf 716}, 1 (2012)
-  [arXiv:1207.7214 [hep-ex]].
-  %%CITATION = ARXIV:1207.7214;%%
-  %3009 citations counted in INSPIRE as of 22 Jul 2014
-  
-  
-%\cite{Chatrchyan:2012ufa}
-\bibitem{Chatrchyan:2012ufa} 
-  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
-  ``Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC,''
-  Phys.\ Lett.\ B {\bf 716}, 30 (2012)
-  [arXiv:1207.7235 [hep-ex]].
-  %%CITATION = ARXIV:1207.7235;%%
-  %2951 citations counted in INSPIRE as of 22 Jul 2014
-
-%\cite{Chatrchyan:2013lba}
-\bibitem{Chatrchyan:2013lba} 
-  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
-  ``Observation of a new boson with mass near 125 GeV in pp collisions at $\sqrt{s}$ = 7 and 8 TeV,''
-  JHEP {\bf 1306}, 081 (2013)
-  [arXiv:1303.4571 [hep-ex]].
-  %%CITATION = ARXIV:1303.4571;%%
-  %188 citations counted in INSPIRE as of 24 Jul 2014
 
 \end{thebibliography}
 
